@@ -109,7 +109,7 @@ const Contact = () => {
           </h2>
 
           <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up">
-            Technically speaking, websites and applications are my forte, but I am always open
+            Technically, websites and applications are my forte, but I am always open
             to discussing new ideas and opportunities in related fields.
           </p>
 
@@ -170,33 +170,33 @@ const Contact = () => {
           </div>
 
           <div className="mb-4">
-            <p id="category" className="label reveal-up">
+            <p id="checkbox" className="label reveal-up">
               Check App Category:
             </p>
             <div className="flex flex-row gap-6">
-              <label htmlFor="WebApp" className="label reveal-up">
-                Website App:  <input type="checkbox" name="WebApp" id="WebApp" required defaultChecked={true} />
+              <label htmlFor="webApp" className="label reveal-up">
+                Website App:  <input type="checkbox" name="webApp" id="webAppId" defaultChecked={true} />
               </label>
-              <label htmlFor="DeskApp" className="label reveal-up">
-                Desktop App:  <input type="checkbox" name="DeskApp" id="DeskApp" required />
+              <label htmlFor="deskApp" className="label reveal-up">
+                Desktop App:  <input type="checkbox" name="deskApp" id="deskAppId" />
               </label>
-              <label htmlFor="MobApp" className="label reveal-up">
-                Mobile App: <input type="checkbox" name="MobApp" id="MobApp" required />
+              <label htmlFor="mobApp" className="label reveal-up">
+                Mobile App: <input type="checkbox" name="mobApp" id="mobAppId" />
               </label>
             </div>
 
             <div className="">
               <label htmlFor="AppFunct" className="label reveal-up">
                 Select App Functionality:
-                <select name="AppFunct" id="AppFunctId" className="mt-2 label reveal-up">
+                <select name="functionality" id="functionalityId" required className="mt-2 label reveal-up">
                   <option value="">Choose App Category Functionality</option>
-                  <option value="">Blog App</option>
-                  <option value="">Fitness App</option>
-                  <option value="">Portfolio App</option>
-                  <option value="">e-commerce App</option>
-                  <option value="">internal employee App</option>
-                  <option value="">---------------------------------------</option>
-                  <option value="">Others</option>
+                  <option value="blog">Blog App</option>
+                  <option value="fitness">Fitness App</option>
+                  <option value="portfolio">Portfolio App</option>
+                  <option value="e-commerce">e-commerce App</option>
+                  <option value="intEmployee">internal employee App</option>
+                  <option value="dashed">---------------------------------------</option>
+                  <option value="others">Others</option>
                 </select>
               </label>
             </div>
