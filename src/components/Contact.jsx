@@ -142,7 +142,6 @@ const Contact = () => {
               <label htmlFor="name" className="label reveal-up">
                 Name:
               </label>
-
               <input
                 type="text"
                 name="name"
@@ -158,9 +157,8 @@ const Contact = () => {
               <label htmlFor="email" className="label reveal-up">
                 Email:
               </label>
-
               <input
-                type="email"
+                type="text"
                 name="email"
                 id="email"
                 autoComplete="email"
@@ -169,30 +167,45 @@ const Contact = () => {
                 className="text-field"
               />
             </div>
-
           </div>
 
           <div className="mb-4">
-            <label htmlFor="inquiry" className="label reveal-up">
-              Inquiry Purpose:
-            </label>
+            <p id="category" className="label reveal-up">
+              Check App Category:
+            </p>
+            <div className="flex flex-row gap-6">
+              <label htmlFor="WebApp" className="label reveal-up">
+                Website App:  <input type="checkbox" name="WebApp" id="WebApp" required defaultChecked={true} />
+              </label>
+              <label htmlFor="DeskApp" className="label reveal-up">
+                Desktop App:  <input type="checkbox" name="DeskApp" id="DeskApp" required />
+              </label>
+              <label htmlFor="MobApp" className="label reveal-up">
+                Mobile App: <input type="checkbox" name="MobApp" id="MobApp" required />
+              </label>
+            </div>
 
-            <input
-              type="text"
-              name="inquiry"
-              id="inquiry"
-              autoComplete="inquiry"
-              required
-              placeholder="Description..."
-              className="text-field"
-            />
+            <div className="">
+              <label htmlFor="AppFunct" className="label reveal-up">
+                Select App Functionality:
+                <select name="AppFunct" id="AppFunctId" className="mt-2 label reveal-up">
+                  <option value="">Choose App Category Functionality</option>
+                  <option value="">Blog App</option>
+                  <option value="">Fitness App</option>
+                  <option value="">Portfolio App</option>
+                  <option value="">e-commerce App</option>
+                  <option value="">internal employee App</option>
+                  <option value="">---------------------------------------</option>
+                  <option value="">Others</option>
+                </select>
+              </label>
+            </div>
           </div>
 
           <div className="mb-4">
             <label htmlFor="message" className="label reveal-up">
               Message:
             </label>
-
             <textarea
               name="message"
               id="message"
