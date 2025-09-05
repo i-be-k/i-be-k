@@ -171,7 +171,7 @@ const Contact = () => {
 
           <div className="mb-4">
             <p id="checkbox" className="label reveal-up">
-              Check App Category:
+              App Category:
             </p>
             <div className="flex flex-row gap-6">
               <label htmlFor="webApp" className="label reveal-up">
@@ -186,10 +186,10 @@ const Contact = () => {
             </div>
 
             <div className="">
-              <label htmlFor="AppFunct" className="label reveal-up">
-                Select App Functionality:
-                <select name="functionality" id="functionalityId" required className="mt-2 label reveal-up">
-                  <option value="">Choose App Category Functionality</option>
+              <label htmlFor="purpose" className="label reveal-up">
+                Select App Purpose:
+                <select name="purpose" id="purposeId" required className="mt-2 label reveal-up">
+                  <option value="">Choose a purpose</option>
                   <option value="blog">Blog App</option>
                   <option value="fitness">Fitness App</option>
                   <option value="portfolio">Portfolio App</option>
