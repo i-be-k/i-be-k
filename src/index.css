@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  @apply bg-blue-900 text-zinc-50;
+  @apply bg-slate-900 text-zinc-50;
 }
 
 /*--------------------------------------------*\
