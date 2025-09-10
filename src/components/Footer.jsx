@@ -119,7 +119,7 @@ const Footer = () => {
           </a>
 
           <p className="text-zinc-500 text-sm reveal-up">
-            &copy; 2025 <span className="text-slate-400">i-be-k</span>
+            &copy; 2025 <span className="text-slate-400">i-bee-k</span>
           </p>
         </div>
       </div>
