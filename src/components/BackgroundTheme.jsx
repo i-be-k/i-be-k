@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 
-const STAR_COUNT = 50;
+const STAR_COUNT = 20;
 const METEOR_COUNT = 3;
 
 function randomBetween(a, b) {
@@ -21,14 +21,14 @@ function createMeteor(width, height) {
         x: randomBetween(0, width),
         y: randomBetween(-100, -10, height),
         length: randomBetween(80, 150),
-        speed: randomBetween(2, 4),
+        speed: randomBetween(2, 3),
         angle: randomBetween(Math.PI / 4, Math.PI / 3),
         opacity: randomBetween(0.7, 1),
         tailColors: ["#fff200", "#ff9800", "#ff3c00"], // yellow to orange to red
     };
 }
 
-export default function MeteorBackground() {
+export default function BackgroundTheme() {
     const canvasRef = useRef();
 
     useEffect(() => {
