@@ -1,18 +1,31 @@
 import { useRef, useEffect } from "react";
 
 const STAR_COUNT = 20;
+const STATIC_STAR_RATIO = 0.4; // 40% of stars are static at the top
+const STATIC_COUNT = Math.round(STAR_COUNT * STATIC_STAR_RATIO);
 const METEOR_COUNT = 3;
 
 function randomBetween(a, b) {
     return a + Math.random() * (b - a);
 }
 
-function createStar(width, height) {
+function createStar(width, height, makeStatic = false) {
+    if (makeStatic) {
+        // Static star sits near the top, within a small vertical band
+        return {
+            x: randomBetween(0, width),
+            y: randomBetween(0, 80), // top band
+            r: randomBetween(0.8, 2),
+            speed: 0, // static
+            isStatic: true,
+        };
+    }
     return {
         x: randomBetween(0, width),
         y: randomBetween(0, height),
         r: randomBetween(0.8, 2),
         speed: randomBetween(0.1, 0.5),
+        isStatic: false,
     };
 }
 
@@ -39,7 +52,9 @@ export default function BackgroundTheme() {
         canvas.width = width;
         canvas.height = height;
 
-        let stars = Array.from({ length: STAR_COUNT }, () => createStar(width, height));
+        let stars = Array.from({ length: STAR_COUNT }, (_, i) =>
+            createStar(width, height, i < STATIC_COUNT)
+        );
         let meteors = Array.from({ length: METEOR_COUNT }, () => createMeteor(width, height));
 
         function drawShinyStar(star) {
@@ -74,29 +89,43 @@ export default function BackgroundTheme() {
             // Distant effect: thinner, dimmer, shorter tail
             for (let i = 0; i < meteor.tailColors.length; i++) {
                 ctx.save();
-                ctx.globalAlpha = meteor.opacity * (0.3 - i * 0.08);
+                // Fading along the tail
+                ctx.globalAlpha = meteor.opacity * (0.35 - i * 0.08);
                 ctx.strokeStyle = meteor.tailColors[i];
                 ctx.lineWidth = 3 - i;
                 ctx.beginPath();
-                ctx.moveTo(meteor.x - i * 5 * Math.cos(meteor.angle), meteor.y - i * 5 * Math.sin(meteor.angle));
+                ctx.moveTo(
+                    meteor.x - i * 5 * Math.cos(meteor.angle),
+                    meteor.y - i * 5 * Math.sin(meteor.angle)
+                );
                 ctx.lineTo(
-                    meteor.x + meteor.length * 0.7 * Math.cos(meteor.angle),
-                    meteor.y + meteor.length * 0.7 * Math.sin(meteor.angle)
+                    meteor.x + meteor.length * 0.9 * Math.cos(meteor.angle),
+                    meteor.y + meteor.length * 0.9 * Math.sin(meteor.angle)
                 );
                 ctx.stroke();
                 ctx.restore();
             }
-            // Head
+            // Head with a bright glow
             ctx.save();
-            ctx.globalAlpha = meteor.opacity * 0.5;
+            // Head glow: a small radial glow around the head position
+            const headX = meteor.x + meteor.length * 0.9 * Math.cos(meteor.angle);
+            const headY = meteor.y + meteor.length * 0.9 * Math.sin(meteor.angle);
+
+            // Soft glow around head
+            const headGlow = ctx.createRadialGradient(headX, headY, 0, headX, headY, 12);
+            headGlow.addColorStop(0, "rgba(255, 240, 190, 0.95)");
+            headGlow.addColorStop(1, "rgba(255, 180, 0, 0)");
+            ctx.fillStyle = headGlow;
             ctx.beginPath();
-            ctx.arc(
-                meteor.x + meteor.length * 0.7 * Math.cos(meteor.angle),
-                meteor.y + meteor.length * 0.7 * Math.sin(meteor.angle),
-                2,
-                0,
-                2 * Math.PI
-            );
+            ctx.arc(headX, headY, 12, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+
+            // Head core (bright) with small bloom
+            ctx.save();
+            ctx.globalAlpha = meteor.opacity;
+            ctx.beginPath();
+            ctx.arc(headX, headY, 2.5, 0, Math.PI * 2);
             ctx.fillStyle = "#fffbe6";
             ctx.shadowColor = "#ff9800";
             ctx.shadowBlur = 8;
@@ -109,9 +138,15 @@ export default function BackgroundTheme() {
 
             stars.forEach(star => {
                 drawShinyStar(star);
-                star.y += star.speed * randomBetween(0.3, 0.7); // slower for distant effect
-                if (star.y > height) {
-                    Object.assign(star, createStar(width, 0));
+                if (!star.isStatic) {
+                    star.y += star.speed * randomBetween(0.3, 0.7); // slower for distant effect
+                    if (star.y > height) {
+                        Object.assign(star, createStar(width, 0, false));
+                    }
+                } else {
+                    // Static stars stay at their top band; you could occasionally glow or twinkle here
+                    // Optional: small twinkle
+                    // star.r = Math.max(0.8, star.r + randomBetween(-0.02, 0.02));
                 }
             });
 
