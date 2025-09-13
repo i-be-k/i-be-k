@@ -148,7 +148,7 @@ const Contact = () => {
                 id="name"
                 autoComplete="name"
                 required
-                placeholder="Input your name"
+                placeholder="FullName"
                 className="text-field"
               />
             </div>
@@ -187,7 +187,7 @@ const Contact = () => {
 
             <div className="">
               <label htmlFor="purpose" className="label reveal-up">
-                Select App Purpose:
+                App Functionality:
                 <select name="purpose" id="purposeId" required className="mt-2 label reveal-up">
                   <option value="">Choose a purpose</option>
                   <option value="blog">Blog App</option>
