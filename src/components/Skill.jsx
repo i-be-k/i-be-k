@@ -80,7 +80,7 @@ const skillItem = [
     desc: "Multipurpose Build Tool",
   },
   {
-    imgSrc: "/images/github.svg",
+    imgSrc: "/images/github.png",
     label: "Github",
     desc: "Cloud-Based Host",
   },
