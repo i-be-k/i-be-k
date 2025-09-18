@@ -10,12 +10,6 @@ import ProjectCard from "./ProjectCard";
 
 const works = [
   {
-    imgSrc: "/images/works/fiverr-copy.jpg",
-    title: "FiverrUI appClone",
-    tags: ["Development", "API"],
-    projectLink: "https://github.com/i-be-k/fiverr-appclone/tree/main/fiverrUi",
-  },
-  {
     imgSrc: "/images/works/project-1.png",
     title: "Full-stack realtor app",
     tags: ["API", "MVC", "Development"],
@@ -29,6 +23,12 @@ const works = [
   },
   {
     imgSrc: "/images/project-3.jpg",
+    title: "Recipe app",
+    tags: ["Development", "API"],
+    projectLink: "https://github.com/i-bee-k/food-recipe-app",
+  },
+  {
+    imgSrc: "/images/project-4.jpg",
     title: "Real state website",
     tags: ["Web-design", "Development"],
     projectLink: "https://github.com/i-bee-k/wealthome",
