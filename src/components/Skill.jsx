@@ -47,7 +47,7 @@ const skillItem = [
   {
     imgSrc: "/images/expressjs.svg",
     label: "ExpressJS",
-    desc: "Node Framework",
+    desc: "Backend Framework",
   },
   {
     imgSrc: "/images/nodejs.svg",
@@ -97,7 +97,7 @@ const skillItem = [
   {
     imgSrc: "/images/netlify.svg",
     label: "Netlify",
-    desc: "Build & Deploy",
+    desc: "Hosting Service",
   },
 ];
 
