@@ -12,42 +12,42 @@ const skillItem = [
   {
     imgSrc: "/images/html5.svg",
     label: "HTML5",
-    desc: "Web-App Structure",
+    desc: "Website Structure",
   },
   {
     imgSrc: "/images/css3.svg",
     label: "CSS",
-    desc: "Styles User Interface",
+    desc: "UI Design",
   },
   {
     imgSrc: "/images/javascript.svg",
     label: "JavaScript",
-    desc: "All Purpose Build Tool",
+    desc: "High Level Language",
   },
   {
     imgSrc: "/images/tailwindcss.svg",
     label: "TailwindCSS",
-    desc: "Styles Framework",
+    desc: "CSS Framework",
   },
   {
     imgSrc: "/images/sass.svg",
     label: "SASS",
-    desc: "Styles Preprocessor",
+    desc: "CSS pre-processor",
   },
   {
     imgSrc: "/images/react.svg",
-    label: "React",
-    desc: "JS Framework",
+    label: "ReactJS",
+    desc: "FrontEnd API Framework",
   },
   {
     imgSrc: "/images/vitejs.svg",
-    label: "Vite",
+    label: "ViteJS",
     desc: "Build tool + development server",
   },
   {
     imgSrc: "/images/expressjs.svg",
     label: "ExpressJS",
-    desc: "Backend Framework",
+    desc: "Backend API Framework",
   },
   {
     imgSrc: "/images/nodejs.svg",
@@ -57,7 +57,7 @@ const skillItem = [
   {
     imgSrc: "/images/mongodb.svg",
     label: "MongoDB",
-    desc: "Schema Database",
+    desc: "Database API Store",
   },
   {
     imgSrc: "/images/postman.svg",
@@ -72,12 +72,12 @@ const skillItem = [
   {
     imgSrc: "/images/c.svg",
     label: "C",
-    desc: "General Purpose Build Tool",
+    desc: "Low Level Language",
   },
   {
     imgSrc: "/images/python.svg",
     label: "Python",
-    desc: "Multipurpose Build Tool",
+    desc: "High Level Language",
   },
   {
     imgSrc: "/images/github.png",
