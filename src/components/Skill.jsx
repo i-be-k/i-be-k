@@ -22,7 +22,7 @@ const skillItem = [
   {
     imgSrc: "/images/javascript.svg",
     label: "JavaScript",
-    desc: "Interaction Function",
+    desc: "All Purpose Build Tool",
   },
   {
     imgSrc: "/images/tailwindcss.svg",
