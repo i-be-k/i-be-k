@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 i-bee-k
+ * @copyright 2026 ibkobi
  * @license Apache-2.0
  */
 
@@ -48,7 +48,7 @@ const App = () => {
       });
     });
   });
-  
+
   return (
     <ReactLenis root>
       <BackgroundTheme />
