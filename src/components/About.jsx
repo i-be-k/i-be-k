@@ -22,8 +22,8 @@ const About = () => {
   return (
     <section id="about" className="section">
       <div className="container">
-        <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
-          <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
+        <div className="glass-box reveal-up">
+          <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch] readable-text">
             Welcome! I&apos;m Ibukun, a professional web developer with a shift
             for crafting visual appealing and great seamless websites.
             Joining creativity and technical experience. I convert your insight

@@ -40,7 +40,7 @@ const Hero = () => {
               I&apos;m open for work. 🙋‍♂️
             </div>
           </div>
-          <h2 className="headline-1 max-w-[15ch] sm:max-m-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
+          <h2 className="headline-1 max-w-[15ch] sm:max-m-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10 readable-text">
             Crafting Timeless Web Gems That Amuse at Obsolescence and Waltz into Tomorrow
           </h2>
 
