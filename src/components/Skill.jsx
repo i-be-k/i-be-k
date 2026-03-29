@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 i-bee-k
+ * @copyright 2025 ibkobi
  * @license Apache-2.0
  */
 
@@ -98,6 +98,11 @@ const skillItem = [
     imgSrc: "/images/netlify.svg",
     label: "Netlify",
     desc: "Hosting Service",
+  },
+  {
+    imgSrc: "/images/docker.svg",
+    label: "Docker",
+    desc: "Containerization Platform",
   },
 ];
 

@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 i-bee-k
+ * @copyright 2025 ibkobi
  * @license Apache-2.0
  */
 
@@ -28,7 +28,7 @@ const SkillCard = ({ imgSrc, label, desc, classes }) => {
       </figure>
 
       <div>
-        <h3 
+        <h3
           className="text-slate-500"
         >
           {label}
