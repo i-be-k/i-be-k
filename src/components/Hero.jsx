@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 i-bee-k
+ * @copyright 2025 ibkobi
  * @license Apache-2.0
  */
 
@@ -35,7 +35,7 @@ const Hero = () => {
               <span className="relative w-2 h-2 rounded-full bg-emerald-400">
                 <span
                   className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"
-                  ></span>
+                ></span>
               </span>
               I&apos;m open for work. 🙋‍♂️
             </div>
@@ -46,7 +46,7 @@ const Hero = () => {
 
           <div className="flex items-center gap-3">
             <ButtonPrimary
-              href="/images/resume.pdf"
+              href="/resume.html"
               target="_blank"
               label="Download CV"
               icon="download"

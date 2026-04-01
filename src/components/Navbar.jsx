@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 i-bee-k
+ * @copyright 2025 ibkobi
  * @license Apache-2.0
  */
 
@@ -62,7 +62,7 @@ const Navbar = ({ navOpen }) => {
       className: "nav-link md:hidden",
     },
   ];
-  
+
   return (
     <nav className={"navbar " + (navOpen ? "active" : "")}>
       {navItems.map(({ label, link, className, ref }, key) => (

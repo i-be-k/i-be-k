@@ -1,5 +1,5 @@
 /**
- * @copyright 2025 i-bee-k
+ * @copyright 2025 ibkobi
  * @license Apache-2.0
  */
 
