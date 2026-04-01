@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ibukun Obideyi – Frontend Developer Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #2563eb;
+      --accent-light: #3b82f6;
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg-subtle: #f8fafc;
+      --bg-white: #ffffff;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-primary);
+      background: #f1f5f9;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Download Bar ─── */
+    .download-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .15);
+    }
+
+    .download-bar span {
+      color: #94a3b8;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 28px;
+      background: linear-gradient(135deg, var(--accent) 0%, #1d4ed8 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s ease;
+      font-family: inherit;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, .4);
+    }
+
+    .download-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .cover-letter-link {
+      color: var(--accent-light);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color .2s;
+    }
+
+    .cover-letter-link:hover {
+      color: #93c5fd;
+      text-decoration: underline;
+    }
+
+    /* ─── Page ─── */
+    .page {
+      max-width: 820px;
+      margin: 90px auto 60px;
+      background: var(--bg-white);
+      border-radius: 12px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, .08);
+      padding: 56px 60px;
+    }
+
+    /* ─── Header ─── */
+    .resume-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+      padding-bottom: 28px;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .resume-header h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+    }
+
+    .resume-header .subtitle {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
+    .contact-info {
+      text-align: right;
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.9;
+    }
+
+    .contact-info a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* ─── Sections ─── */
+    .section {
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ─── Summary ─── */
+    .summary p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* ─── Skills ─── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 40px;
+    }
+
+    .skill-category {
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .skill-category strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .skill-category span {
+      color: var(--text-secondary);
+    }
+
+    /* ─── Experience ─── */
+    .experience-item {
+      margin-bottom: 22px;
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .exp-header h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .exp-header .date {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .exp-sub {
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .exp-list {
+      padding-left: 18px;
+    }
+
+    .exp-list li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+      line-height: 1.65;
+    }
+
+    /* ─── Projects ─── */
+    .project-item {
+      margin-bottom: 18px;
+    }
+
+    .project-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-item h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .project-item .tech {
+      display: inline-block;
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .project-item p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ─── Education ─── */
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-item h3 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .edu-item .date {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .edu-item p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    /* ─── Print Styles ─── */
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .download-bar {
+        display: none !important;
+      }
+
+      .page {
+        margin: 0;
+        padding: 40px 50px;
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 32px 24px;
+        margin: 80px 12px 40px;
+      }
+
+      .resume-header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .contact-info {
+        text-align: left;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Download Bar -->
+  <div class="download-bar">
+    <span>Ready to download?</span>
+    <button class="download-btn" onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+      </svg>
+      Download as PDF
+    </button>
+    <a class="cover-letter-link" href="cover-letter.html">View Cover Letter →</a>
+  </div>
+
+  <!-- Resume Page -->
+  <div class="page">
+
+    <!-- Header -->
+    <header class="resume-header">
+      <div>
+        <h1>Ibukun Obideyi</h1>
+        <p class="subtitle">Frontend Developer</p>
+      </div>
+      <div class="contact-info">
+        <a href="https://linkedin.com/in/ibukunobideyi" target="_blank">linkedin.com/in/ibukunobideyi</a><br />
+        <a href="https://github.com/i-be-k" target="_blank">github.com/i-be-k</a><br />
+        ibukunobideyi@gmail.com<br />
+        Ibadan, Nigeria
+      </div>
+    </header>
+
+    <!-- Summary -->
+    <div class="section summary">
+      <h2 class="section-title">Professional Summary</h2>
+      <p>
+        Frontend developer with 2+ years of experience building modern, high-performance web applications
+        using React, Next.js, and TypeScript. Proven track record of delivering production-grade e-commerce
+        platforms, interactive portfolios, and fullstack microservice architectures. Passionate about
+        crafting pixel-perfect UIs, smooth animations, and seamless user experiences. Strong foundation
+        in component-driven design, state management, and payment integration.
+      </p>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <strong>Frontend:</strong>
+          <span>React 18/19, Next.js 15, TypeScript, JavaScript (ES6+), HTML5, CSS3</span>
+        </div>
+        <div class="skill-category">
+          <strong>Styling:</strong>
+          <span>Tailwind CSS 4, SASS/SCSS, Radix UI, Shadcn/UI, CSS Animations, GSAP</span>
+        </div>
+        <div class="skill-category">
+          <strong>State & Forms:</strong>
+          <span>Zustand, React Hook Form, Zod, React Context</span>
+        </div>
+        <div class="skill-category">
+          <strong>Payments & Auth:</strong>
+          <span>Stripe (Elements, Checkout), Clerk Authentication</span>
+        </div>
+        <div class="skill-category">
+          <strong>Backend:</strong>
+          <span>Node.js, Express, Fastify, Hono, REST APIs</span>
+        </div>
+        <div class="skill-category">
+          <strong>Data & Infra:</strong>
+          <span>Prisma ORM, MongoDB, Kafka (KafkaJS), Docker</span>
+        </div>
+        <div class="skill-category">
+          <strong>Tooling:</strong>
+          <span>Vite, Turbopack, Turborepo, pnpm, ESLint, Prettier, Git</span>
+        </div>
+        <div class="skill-category">
+          <strong>Other:</strong>
+          <span>Figma, Recharts, TanStack Table, Postman, Netlify, Vercel</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="experience-item">
+        <div class="exp-header">
+          <h3>Frontend Developer – Freelance / Personal Projects</h3>
+          <span class="date">2024 – Present</span>
+        </div>
+        <div class="exp-sub">Fullstack Web Development</div>
+        <ul class="exp-list">
+          <li>Architected and built a full-scale <strong>e-commerce platform</strong> using a Turborepo monorepo with
+            Next.js 15, React 19, TypeScript, and Tailwind CSS 4 for the storefront and admin dashboard.</li>
+          <li>Integrated <strong>Stripe payment processing</strong> (Elements, Checkout Sessions) with real-time webhook
+            handling for seamless checkout experiences.</li>
+          <li>Implemented <strong>Clerk authentication</strong> with role-based access for both customer-facing and
+            admin applications.</li>
+          <li>Built a state-of-the-art <strong>admin dashboard</strong> with data tables (TanStack Table), analytics
+            charts (Recharts), and fully accessible UI components (Radix UI + Shadcn/UI).</li>
+          <li>Designed <strong>event-driven microservices</strong> (payment, order, product) communicating via Apache
+            Kafka for real-time order processing.</li>
+          <li>Managed database schemas with <strong>Prisma ORM</strong> across multiple services with shared type-safe
+            packages.</li>
+          <li>Delivered a <strong>dynamic portfolio website</strong> with GSAP animations, real-time weather/moon-phase
+            backgrounds, and smooth scrolling (Lenis).</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="exp-header">
+          <h3>Frontend Developer – Client Projects</h3>
+          <span class="date">2023 – 2024</span>
+        </div>
+        <div class="exp-sub">React & Vite Development</div>
+        <ul class="exp-list">
+          <li>Developed a <strong>barbershop booking website</strong> (Heritage Celebs Barber) with React 19, Vite,
+            Tailwind CSS, and AOS scroll animations.</li>
+          <li>Built a <strong>Fiverr marketplace clone</strong> with React Router, SASS styling, and infinite carousel
+            components.</li>
+          <li>Created a <strong>real estate listing app</strong> (Fullstack Realtor) with React frontend and
+            Express/Node.js API backend.</li>
+          <li>Developed additional projects including an <strong>employee dashboard</strong>, <strong>vlog
+              platform</strong>, and <strong>school management system</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Key Projects -->
+    <div class="section">
+      <h2 class="section-title">Key Projects</h2>
+
+      <div class="project-item">
+        <h3>E-Commerce Platform (Monorepo)</h3>
+        <span class="tech">Next.js 15 · React 19 · TypeScript · Tailwind CSS 4 · Stripe · Clerk · Kafka · Prisma ·
+          Turborepo</span>
+        <p>Full-featured shopping platform with customer storefront, admin panel, and microservice backend. Includes
+          cart management (Zustand), form validation (React Hook Form + Zod), and real-time order tracking via Kafka
+          event streaming.</p>
+      </div>
+
+      <div class="project-item">
+        <h3>Interactive Developer Portfolio</h3>
+        <span class="tech">React · Vite · Tailwind CSS · GSAP · Lenis · Weather API</span>
+        <p>Dynamic portfolio with celestial background themes synced to real-time weather data and timezone-aware moon
+          phases. Leverages GSAP for scroll-triggered animations and Lenis for buttery-smooth scrolling.</p>
+      </div>
+
+      <div class="project-item">
+        <h3>Heritage Celebs Barber Website</h3>
+        <span class="tech">React 19 · Vite · Tailwind CSS · AOS · React Scroll</span>
+        <p>Modern barbershop website with animated sections, service showcases, and a responsive mobile-first design
+          featuring smooth scroll navigation.</p>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-item">
+        <div>
+          <h3>Self-Directed &amp; Continuous Learning</h3>
+          <p>React, Next.js, TypeScript, System Design, Microservices Architecture</p>
+        </div>
+        <span class="date">2023 – Present</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // The print dialog allows saving as PDF in all modern browsers
+    document.title = 'Ibukun_Obideyi_Frontend_Developer_Resume';
+  </script>
+</body>
+
+</html>
