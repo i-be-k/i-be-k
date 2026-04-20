@@ -20,11 +20,6 @@ const skillItem = [
     desc: "UI Design",
   },
   {
-    imgSrc: "/images/javascript.svg",
-    label: "JavaScript",
-    desc: "High Level Language",
-  },
-  {
     imgSrc: "/images/tailwindcss.svg",
     label: "TailwindCSS",
     desc: "CSS Framework",
@@ -40,6 +35,11 @@ const skillItem = [
     desc: "FrontEnd API Framework",
   },
   {
+    imgSrc: "/images/nextjs-icon.svg",
+    label: "NextJS",
+    desc: "React API Framework",
+  },
+  {
     imgSrc: "/images/vitejs.svg",
     label: "ViteJS",
     desc: "Build tool + development server",
@@ -48,6 +48,16 @@ const skillItem = [
     imgSrc: "/images/expressjs.svg",
     label: "ExpressJS",
     desc: "Backend API Framework",
+  },
+  {
+    imgSrc: "/images/javascript.svg",
+    label: "JavaScript",
+    desc: "High Level Language",
+  },
+  {
+    imgSrc: "/images/typescript-programming-language-icon.svg",
+    label: "TypeScript",
+    desc: "Advanced JavaScript PL",
   },
   {
     imgSrc: "/images/nodejs.svg",
@@ -93,6 +103,11 @@ const skillItem = [
     imgSrc: "/images/bash.svg",
     label: "Bash",
     desc: "Command Line Interface",
+  },
+  {
+    imgSrc: "/images/vercel-icon.svg",
+    label: "Vercel",
+    desc: "Hosting Service",
   },
   {
     imgSrc: "/images/netlify.svg",
