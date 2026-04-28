@@ -10,6 +10,12 @@ import ProjectCard from "./ProjectCard";
 
 const works = [
   {
+    imgSrc: "/images/project-0.png",
+    title: "Full stack eCommerce Website",
+    tags: ["eCommerce", "Development"],
+    projectLink: "https://github.com/i-bee-k/anon-ecommerce-website",
+  },
+  {
     imgSrc: "/images/works/fiverr-copy.jpg",
     title: "FiverrUI appClone",
     tags: ["Web-design", "Development"],
@@ -38,13 +44,7 @@ const works = [
     title: "eCommerce UI/UX",
     tags: ["eCommerce", "Development"],
     projectLink: "https://github.com/i-bee-k/anon-ecommerce-website",
-  },
-  {
-    imgSrc: "/images/project-6.jpg",
-    title: "vCard Personal portfolio",
-    tags: ["Web-design", "Development"],
-    projectLink: "https://github.com/i-bee-k/vcard-personal-portfolio",
-  },
+  }
 ];
 
 const Work = () => {
