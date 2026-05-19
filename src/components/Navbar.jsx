@@ -9,7 +9,7 @@
 import { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 
-const Navbar = ({ navOpen }) => {
+const Navbar = ({ navOpen, closeNav }) => {
   const lastActiveLink = useRef();
   const activeBox = useRef();
 
@@ -32,6 +32,8 @@ const Navbar = ({ navOpen }) => {
     activeBox.current.style.left = event.target.offsetLeft + "px";
     activeBox.current.style.width = event.target.offsetWidth + "px";
     activeBox.current.style.height = event.target.offsetHeight + "px";
+    
+    if (closeNav) closeNav();
   };
 
   const navItems = [
@@ -83,6 +85,7 @@ const Navbar = ({ navOpen }) => {
 
 Navbar.propTypes = {
   navOpen: PropTypes.bool.isRequired,
+  closeNav: PropTypes.func,
 };
 
 export default Navbar;
