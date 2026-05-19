@@ -11,7 +11,8 @@ html {
 }
 
 body {
-  @apply bg-slate-900 text-zinc-50;
+  @apply bg-[#faf9f6] text-zinc-900 dark:bg-slate-900 dark:text-zinc-50 transition-colors duration-500;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 /*--------------------------------------------*\
@@ -19,11 +20,11 @@ body {
 \*--------------------------------------------*/
 .headline-1,
 .headline-2 {
-  @apply max-w-max;
-  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1aa);
+  @apply max-w-max bg-gradient-to-r from-zinc-900 to-zinc-600 dark:from-zinc-50 dark:to-zinc-400;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.1));
 }
 
 .headline-1 {
@@ -48,7 +49,7 @@ body {
 }
 
 .glass-box {
-  @apply backdrop-blur-md bg-zinc-950/30 rounded-3xl border border-zinc-50/10 p-6 lg:p-10;
+  @apply backdrop-blur-md bg-white/20 dark:bg-zinc-950/30 rounded-3xl border border-zinc-900/10 dark:border-zinc-50/10 p-6 lg:p-10 transition-colors duration-500;
 }
 
 .material-symbols-rounded {
@@ -82,39 +83,39 @@ body {
 
 /* Menu btn */
 .menu-btn {
-  @apply w-10 h-10 grid place-items-center bg-zinc-50/10 rounded-xl ring-inset ring-1 ring-zinc-50/[0.02] backdrop-blur-2xl hover:bg-zinc-50/15 transition-[transform,background-color] active:scale-95;
+  @apply w-10 h-10 grid place-items-center bg-zinc-900/5 dark:bg-zinc-50/10 rounded-xl ring-inset ring-1 ring-zinc-900/5 dark:ring-zinc-50/[0.02] backdrop-blur-2xl hover:bg-zinc-900/10 dark:hover:bg-zinc-50/15 transition-[transform,background-color] active:scale-95;
 }
 
 /* Navbar */
 
 .navbar {
-  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-xl;
+  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50 dark:bg-zinc-800/90 rounded-2xl ring-inset ring-1 ring-zinc-900/5 dark:ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter,background-color] md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-xl;
 }
 
 .navbar.active {
-  @apply bg-neutral-700 opacity-80 scale-100 blur-0 visible;
+  @apply bg-zinc-100 dark:bg-neutral-700 opacity-95 dark:opacity-80 scale-100 blur-0 visible;
 }
 
 .nav-link {
-  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-gray-300 transition-colors;
+  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-600 dark:text-zinc-50/50 hover:text-zinc-900 dark:hover:text-gray-300 transition-colors;
 }
 
 .nav-link.active {
-  @apply text-zinc-900 duration-500;
+  @apply text-zinc-900 dark:text-zinc-50 duration-500;
 }
 
 .navbar .active-box {
-  @apply absolute bg-stone-300 rounded-lg -z-10 transition-[top,left] duration-500;
+  @apply absolute bg-white/50 dark:bg-stone-300/20 rounded-lg -z-10 transition-[top,left] duration-500 shadow-sm dark:shadow-none;
 }
 
 /* Button */
 
 .btn {
-  @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium text-sm ring-1 ring-zinc-50/5 ring-inset transition-[background-color];
+  @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium text-sm ring-1 ring-zinc-900/5 dark:ring-zinc-50/5 ring-inset transition-[background-color];
 }
 
 .btn-secondary {
-  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80;
+  @apply bg-zinc-900 dark:bg-zinc-50 text-zinc-50 dark:text-zinc-900 active:bg-zinc-800 dark:active:bg-zinc-50/80;
 }
 
 .btn .material-symbols-rounded {
@@ -130,7 +131,7 @@ body {
 }
 
 .btn-outline {
-  @apply h-11 bg-zinc-800 text-stone-300 hover:bg-stone-600 active:bg-zinc-800;
+  @apply h-11 bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-stone-300 hover:bg-zinc-300 dark:hover:bg-stone-600 active:bg-zinc-200 dark:active:bg-zinc-800;
 }
 
 /* Text field*/
@@ -139,7 +140,7 @@ body {
 }
 
 .text-field {
-  @apply block outline-none w-full px-3 py-3 text-sm bg-zinc-800 rounded-xl ring-1 ring-inset ring-transparent transition-shadow hover:ring-zinc-50/5 focus:ring-sky-400 focus:ring-2;
+  @apply block outline-none w-full px-3 py-3 text-sm bg-white dark:bg-zinc-800 rounded-xl ring-1 ring-inset ring-transparent transition-shadow hover:ring-zinc-900/5 dark:hover:ring-zinc-50/5 focus:ring-sky-400 focus:ring-2 dark:focus:ring-sky-400;
 }
 
 .text-field:placeholder {
