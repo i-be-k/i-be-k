@@ -16,7 +16,7 @@ ratings.fill({
 
 const ReviewCard = ({ content, imgSrc, name, company }) => {
   return (
-    <div className="bg-zinc-800 p-5 rounded-xl min-w-[320px] flex flex-col lg:min-w-[420px]">
+    <div className="bg-zinc-100 dark:bg-zinc-800 p-5 rounded-xl min-w-[320px] flex flex-col lg:min-w-[420px]">
       <div className="flex items-center gap-1 mb-3">
         {ratings.map(({ icon, style }, key) => (
           <span
@@ -29,7 +29,7 @@ const ReviewCard = ({ content, imgSrc, name, company }) => {
         ))}
       </div>
 
-      <p className="text-zinc-400 mb-8">{content}</p>
+      <p className="text-zinc-600 dark:text-zinc-400 mb-8">{content}</p>
 
       <div className="flex items-center gap-2 mt-auto">
         <figure className="img-box rounded-lg">
@@ -46,7 +46,7 @@ const ReviewCard = ({ content, imgSrc, name, company }) => {
         <div>
           <p>{name}</p>
 
-          <p className="text-xs text-zinc-400 tracking-wider"> {company}</p>
+          <p className="text-xs text-zinc-600 dark:text-zinc-400 tracking-wider"> {company}</p>
         </div>
       </div>
     </div>

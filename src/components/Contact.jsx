@@ -108,12 +108,12 @@ const Contact = () => {
             Contact me for collaboration
           </h2>
 
-          <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up readable-text">
+          <p className="text-zinc-600 dark:text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up readable-text">
             Technically, websites and applications are my forte, but I am always open
             to discussing new ideas and opportunities in related fields.
           </p>
 
-          <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up">
+          <p className="text-zinc-600 dark:text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up">
             Reach out today to discuss your project needs and start
             collaborating on something amazing!
           </p>
@@ -175,13 +175,13 @@ const Contact = () => {
             </p>
             <div className="flex flex-row gap-6">
               <label htmlFor="webApp" className="label reveal-up">
-                Website App:  <input type="checkbox" name="webApp" id="webAppId" defaultChecked={true} />
+                Website:  <input type="checkbox" name="webApp" id="webAppId" defaultChecked={true} />
               </label>
               <label htmlFor="deskApp" className="label reveal-up">
-                Desktop App:  <input type="checkbox" name="deskApp" id="deskAppId" />
+                Desktop:  <input type="checkbox" name="deskApp" id="deskAppId" />
               </label>
               <label htmlFor="mobApp" className="label reveal-up">
-                Mobile App: <input type="checkbox" name="mobApp" id="mobAppId" />
+                Mobile: <input type="checkbox" name="mobApp" id="mobAppId" />
               </label>
             </div>
 

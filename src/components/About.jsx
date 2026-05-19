@@ -23,7 +23,7 @@ const About = () => {
     <section id="about" className="section">
       <div className="container">
         <div className="glass-box reveal-up">
-          <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch] readable-text">
+          <p className="text-zinc-700 dark:text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch] readable-text">
             Welcome! I&apos;m Ibukun, a professional web developer with a shift
             for crafting visual appealing and great seamless websites.
             Joining creativity and technical experience. I convert your insight

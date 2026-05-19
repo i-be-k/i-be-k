@@ -30,7 +30,7 @@ const Hero = () => {
             </figure>
 
             <div
-              className="flex items-center gap-1.5 text-zinc-400 text-sm tracking-wide"
+              className="flex items-center gap-1.5 text-zinc-600 dark:text-zinc-400 text-sm tracking-wide"
             >
               <span className="relative w-2 h-2 rounded-full bg-emerald-400">
                 <span
