@@ -10,11 +10,11 @@
 const aboutItems = [
   {
     label: "Project done",
-    number: 7,
+    number: 12,
   },
   {
     label: "Years of experience",
-    number: 2,
+    number: 4,
   },
 ];
 
@@ -24,7 +24,7 @@ const About = () => {
       <div className="container">
         <div className="glass-box reveal-up">
           <p className="text-zinc-700 dark:text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch] readable-text">
-            Welcome! I&apos;m Ibukun, a professional web developer with a shift
+            Welcome! I&apos;m Ibukun, a professional Full Stack web developer with a shift
             for crafting visual appealing and great seamless websites.
             Joining creativity and technical experience. I convert your insight
             into web-based showpiece that excels in both aspect and execution.
